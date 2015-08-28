@@ -221,7 +221,8 @@ To view the specifics view visit [Railscast](http://railscasts.com/episodes/335-
   * (2) nginx.conf
   * (2) unicorn.rb
   * (1) unicorn_init.sh
-4. Mark the unicorn_init as executable `$ chmod +x config/unicorn_init.sh`
+4. Mark the unicorn_init as executable
+`$ chmod +x config/unicorn_init.sh`
 5. Push your code to github
 
 ### Deploy
@@ -260,9 +261,10 @@ $ ssh deployer@178.xxx.xxx.xxx
 deployer@iron-ocean-production:~$ sudo rm /etc/nginx/sites-enabled/default
 [sudo] password for deployer:
 deployer@iron-ocean-production:~$ sudo service nginx restart
-Restarting nginx: nginx.
+nginx stop/waiting
+nginx start/running, process 25529
 ```
 
 ```
-sudo update-rc.d unicorn_iron_ocean defaults
+deployer@iron-ocean-production:~$ sudo update-rc.d unicorn_iron_ocean defaults
 ```
