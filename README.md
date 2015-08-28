@@ -245,7 +245,7 @@ production:
   database: blog_production
   pool: 5
   host: localhost
-  username: ironocean
+  username: iron
   password: secret
 ```
 #### Logging Into The Server Automatically
